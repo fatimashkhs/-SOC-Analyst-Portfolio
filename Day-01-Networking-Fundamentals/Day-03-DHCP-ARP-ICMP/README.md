@@ -123,3 +123,32 @@ Answer:
 - Gateway MAC: 00:50:56:f7:43:20
 - My MAC: 00:0c:29:f1:dd:2b
 - DHCP enabled: Yes
+
+## Commands Practiced
+
+### Windows
+
+| Command | Purpose |
+|---------|---------|
+| arp -a | View ARP table (IP to MAC) |
+| ping 8.8.8.8 | Test connectivity (ICMP) |
+| ipconfig /all | Full network config + DHCP status |
+
+### Linux/Kali
+
+| Command | Purpose |
+|---------|---------|
+| arp -a | View ARP table |
+| ping -c 4 8.8.8.8 | Send 4 ICMP packets |
+| ip addr | View IP and MAC addresses |
+| ip route | View routing table (gateway) |
+| nmcli connection show | View network details + DHCP |
+| sudo dhclient -v | Request DHCP lease |
+
+### What I Learned From These Commands
+
+- arp -a shows IP to MAC mappings — check for duplicates (ARP spoofing)
+- ping tests if a host is alive — detect ICMP floods
+- ipconfig /all and nmcli show DHCP status
+- ip route shows the default gateway
+- dhclient -v shows the DORA process in action
